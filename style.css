@@ -566,14 +566,14 @@ ul .list-item {
 }
 
 .footer p {
-  font-size: 0.85rem;
+  font-size: clamp(0.875rem, 1vw, 1rem);
   line-height: 1.5;
   max-width: 260px;
 }
 
 .footer h4 {
   color: var(--white);
-  font-size: 0.8rem;
+  font-size: clamp(0.875rem, 1vw, 1rem);
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 14px;
@@ -588,7 +588,7 @@ ul .list-item {
 
 .footer li,
 .footer a {
-  font-size: 0.85rem;
+  font-size: clamp(0.875rem, 1vw, 1rem);
   color: var(--gray-400);
 }
 
