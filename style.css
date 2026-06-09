@@ -46,19 +46,24 @@
   /*Gap*/
   --gap-15: 15px;
 
+  /*Font size*/
   --font-sm: clamp(0.875rem, 1vw, 1rem);
 }
 
 /* ==========================================
     Basic reset & typography
    ========================================== */
+   *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 
 * {
   margin: 0;
   padding: 0;
   font: inherit;
-  font-family: var(--font-poppins);
-  box-sizing: border-box;
 }
 
 img {
@@ -141,6 +146,19 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* 4. Layout utilities */
+.article, .hero, .section{
+  width: min(100% - 2rem, 1250px);
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.container {
+  width: min(100% - 2rem, 1250px);
+  margin-inline: auto;
+}
+
 .d-flex {
   display: flex;
 }
@@ -167,29 +185,6 @@ button:focus-visible {
   gap: 10px;
 }
 
-@media (max-width: 768px) {
-  .grid-2 {
-    grid-template-columns: 1fr;
-  }
-
-  .grid-3 {
-    grid-template-columns: 2fr 2fr;
-  }
-
-  .grid-4 {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (max-width: 568px) {
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-  .grid-4 {
-    grid-template-columns: 1fr;
-  }
-}
-
 .justify-content-center {
   justify-content: center;
 }
@@ -205,6 +200,71 @@ button:focus-visible {
 .align-self-end {
   align-self: end;
 }
+
+/* 5. Components */
+.btn {
+  text-align: center;
+  cursor: pointer;
+  padding: 8px 24px;
+  width: fit-content;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--purple-600);
+  color: #fff;
+  transition: .5s;
+   
+  &:hover {
+     background-color: oklch(0.41 0.24 279.31);
+   }
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: var(--purple-600);
+  border-color: var(--purple-600);
+  border: solid 1px;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: var(--purple-600);
+    color: #fff;
+  }
+}
+
+/* TAG STYLES */
+.tag {
+  padding: 0.5rem;
+  font-weight: var(--bold-600);
+}
+
+.tag-purple {
+  background-color: var(--purple-200);
+  color: var(--purple-600);
+}
+
+.tag-green {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.tag-yellow {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.tag-red {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.tag-blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+/* 6. Sections */
 
 .navbar {
   padding: 8px;
@@ -243,36 +303,6 @@ ul .list-item {
   gap: var(--gap-15);
 }
 
-.btn {
-  text-align: center;
-  cursor: pointer;
-  padding: 8px 24px;
-  width: fit-content;
-  border: none;
-}
-
-.btn-primary {
-  background-color: var(--purple-600);
-  color: #fff;
-  transition: .5s;
-  
-  &:hover{
-  background-color: oklch(0.41 0.24 279.31);
-}
-}
-
-.btn-secondary {
-  background-color: #fff;
-  color: var(--purple-600);
-  border-color: var(--purple-600);
-  border: solid 1px;
-  transition: 0.5s;
-
-  &:hover {
-    background-color: var(--purple-600);
-    color: #fff;
-  }
-}
 
 .menu-toggle {
   display: none;
@@ -282,57 +312,6 @@ ul .list-item {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-}
-
-/* Mobil */
-@media (max-width: 768px) {
-  .navbar {
-    position: relative;
-    justify-content: space-between;
-    padding: 16px;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  .ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--white);
-    flex-direction: column;
-    gap: 0;
-    padding: 1rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    z-index: 10;
-  }
-
-  .ul .list-item {
-    padding: 12px 0;
-  }
-
-  .menu-toggle:checked ~ .ul {
-    display: flex;
-  }
-
-  .login-holder {
-    display: none;
-  }
-}
-
-.article, .hero, .section{
-  width: min(100% - 2rem, 1250px);
-  margin-inline: auto;
-  margin-bottom: 2rem;
-  margin-top: 4rem;
-}
-
-.container {
-  width: min(100% - 2rem, 1250px);
-  margin-inline: auto;
 }
 
 .hero {
@@ -351,6 +330,13 @@ ul .list-item {
   gap: 8px;
   max-width: 520px;
 }
+
+.search-banner {
+  width: 100%;
+  background: var(--indigo-100);
+  padding: 2rem 0;
+}
+
 
 .img-left {
   height: 360px;
@@ -391,23 +377,6 @@ ul .list-item {
   gap: 8px;
 }
 
-.search-banner {
-  width: 100%;
-  background: var(--indigo-100);
-  padding: 2rem 0;
-}
-
-.search-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.search-container h2 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
 .form-group {
   display: flex;
   flex-direction: column;
@@ -432,14 +401,6 @@ ul .list-item {
 .search-btn {
   height: 42px;
   white-space: nowrap;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(340px, 1fr));
-  gap: 24px;
-  width: 100%;
-  margin-top: 2rem;
 }
 
 .card {
@@ -474,38 +435,6 @@ ul .list-item {
     color: var(--gray-950);
     margin: 0.75rem 0 0.5rem;
   }
-}
-
-
-/* TAG STYLES */
-.tag {
-  padding: 0.5rem;
-  font-weight: var(--bold-600);
-}
-
-.tag-purple {
-  background-color: var(--purple-200);
-  color: var(--purple-600);
-}
-
-.tag-green {
-  background: #dcfce7;
-  color: #15803d;
-}
-
-.tag-yellow {
-  background: #fef3c7;
-  color: #b45309;
-}
-
-.tag-red {
-  background: #fce7f3;
-  color: #be185d;
-}
-
-.tag-blue {
-  background: #dbeafe;
-  color: #2563eb;
 }
 
 .card-place {
@@ -557,7 +486,7 @@ ul .list-item {
 }
 
 
-/* FOOTERS STYLES */
+/* FOOTER STYLES */
 .footer {
   background-color: #070b1a;
   color: var(--gray-300);
@@ -624,10 +553,66 @@ ul .list-item {
   color: var(--white);
 }
 
+/* Mobil */
 @media (max-width: 768px) {
+    .navbar {
+    position: relative;
+    justify-content: space-between;
+    padding: 16px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+  }
+
+  .ul .list-item {
+    padding: 12px 0;
+  }
+
+  .menu-toggle:checked ~ .ul {
+    display: flex;
+  }
+
+  .login-holder {
+    display: none;
+  }
+    .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .footer {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+}
+
+@media (max-width: 568px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-4 {
+    grid-template-columns: 1fr;
   }
 }
 
