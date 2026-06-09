@@ -47,7 +47,8 @@
   --gap-15: 15px;
 
   /*Font size*/
-  --font-sm: clamp(0.875rem, 1vw, 1rem);
+  --font-xs: clamp(0.875rem, 1vw, 1rem);
+  --font-sm: clamp(0.9rem, 1vw, 1rem);
 }
 
 /* ==========================================
@@ -197,6 +198,10 @@ button:focus-visible {
   justify-content: space-around;
 }
 
+.justify-content-space{
+  justify-content: space-between;
+}
+
 .align-self-end {
   align-self: end;
 }
@@ -237,6 +242,7 @@ button:focus-visible {
 .tag {
   padding: 0.5rem;
   font-weight: var(--bold-600);
+  font-size: var(--font-xs);
 }
 
 .tag-purple {
@@ -391,7 +397,7 @@ ul .list-item {
 }
 
 .form-group label {
-  font-size: 0.85rem;
+  font-size: var(--font-xs);
   font-weight: 700;
 }
 
@@ -410,6 +416,10 @@ ul .list-item {
   white-space: nowrap;
 }
 
+.search-svg{
+  cursor: pointer;
+}
+
 .card {
   position: relative;
   background: white;
@@ -425,6 +435,8 @@ ul .list-item {
    right: 10px;
    top: 10px;
    cursor: pointer;
+   background: none;
+  border: none;
   }
 }
 
@@ -446,10 +458,11 @@ color: #ef4444; /* Tailwind Red 500 */
 .card-body {
   padding: 16px;
   min-height: 120px;
+  padding-bottom: 3em;
 
   .card-title {
     font-family: var(--font-poppins);
-    font-size: clamp(0.9rem, 1vw, 1rem);
+    font-size: var(--font-xs);
     font-weight: 700;
     line-height: 1.35;
     color: var(--gray-950);
@@ -461,6 +474,10 @@ color: #ef4444; /* Tailwind Red 500 */
   font-size: var(--font-sm);
   color: var(--gray-600);
   margin-top: 1rem;
+}
+
+.event-date{
+  font-size: var(--font-sm);
 }
 
 .info-banner {
@@ -496,7 +513,7 @@ color: #ef4444; /* Tailwind Red 500 */
 
 .info-block-title {
   font-weight: 700;
-  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-size: clamp(1rem, 1vw, 1rem);
   margin-bottom: 3rem;
 }
 
@@ -547,7 +564,8 @@ color: #ef4444; /* Tailwind Red 500 */
 }
 
 .footer li,
-.footer a {
+.footer a, 
+footer address{
   font-size: var(--font-sm);
   color: var(--gray-400);
 }

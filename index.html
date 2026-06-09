@@ -35,7 +35,7 @@
             <li class="list-item"><a href="#">Kontakt</a></li>
           </ul>
           <div class="login-holder d-flex align-items-center">
-            <svg width="20"height="20"viewBox="0 0 24 24" fill="none" stroke="currentColor"stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" >
+            <svg class="search-svg" width="20"height="20"viewBox="0 0 24 24" fill="none" stroke="currentColor"stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" >
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
@@ -59,8 +59,8 @@
               Upptäck vad som händer nära dig.
             </p>
             <div class="explore-wrapper">
-              <button class="btn btn-primary">Utforska evenemang</button>
-              <button class="btn btn-secondary">Se helgens tips</button>
+              <a href="#" class="btn btn-primary">Utforska evenemang</a>
+              <a href="#" class="btn btn-secondary">Se helgens tips</a>
             </div>
           </div>
           <div class="hero-images">
@@ -108,85 +108,115 @@
        <section class="section">
           <div class="d-grid grid-3">
             <article class="card">
-              <div class="heart-holder">
+              <button class="heart-holder" aria-label="Lägg till i favoriter">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </div>
+              </button>
               <div class="card-top">
                 <img src="/assets/1084-536x354-grayscale.jpg" alt="Tre valrossar vilar på en strand" />
               </div>
               <div class="card-body">
-                <span class="tag tag-purple">Konsert</span>
-                <h3 class="card-title">Indie Night med Nova sun</h3>
+                  <div class="d-flex justify-content-space align-items-center">
+                    <span class="tag tag-purple">Konsert</span>
+                  <small>
+                    <time class="event-date" datetime="2026-05-24">24 maj</time>
+                  </small>
+                </div>
+                 <h3 class="card-title">Indie Night med Nova sun</h3>
                 <small class="card-place">Studio Lera, Göteborg</small>
               </div>
             </article>
             <article class="card">
-              <div class="heart-holder">
+             <button class="heart-holder" aria-label="Lägg till i favoriter">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </div>
+              </button>
               <div class="card-top">
                 <img src="/assets/237-536x354.jpg" alt="Svart hund sitter på ett trägolv och tittar upp" />
               </div>
               <div class="card-body">
-                <span class="tag tag-green">Marknad</span>
+                 <div class="d-flex justify-content-space align-items-center ">
+                    <span class="tag tag-green">Marknad</span>
+                   <small>
+                    <time class="event-date" datetime="2026-05-25">25 maj</time>
+                  </small>
+                </div>
                 <h3 class="card-title">Vårmarknad i slottskogen</h3>
                 <small class="card-place">Studio Lera, Göteborg</small>
               </div>
             </article>
             <article class="card">
-              <div class="heart-holder">
+            <button class="heart-holder" aria-label="Lägg till i favoriter">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </div>
+              </button>
               <div class="card-top">
                 <img src="/assets/1060-536x354-blur_2.jpg" alt="Manuell kaffebryggning med pour-over-metod" />
               </div>
               <div class="card-body">
-                <span class="tag tag-yellow">Workshop</span>
-                <h3 class="card-title">Keramikkurs för nybörjare</h3>
+                 <div class="d-flex justify-content-space align-items-center ">
+                  <span class="tag tag-yellow">Workshop</span>
+                   <small>
+                    <time class="event-date" datetime="2026-05-27">27 maj</time>
+                  </small>
+                </div>
+                 <h3 class="card-title">Keramikkurs för nybörjare</h3>
                 <small class="card-place">Pustervik, Göteborg</small>
               </div>
             </article>
             <article class="card">
-              <div class="heart-holder">
+              <button class="heart-holder" aria-label="Lägg till i favoriter">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </div>
+              </button>
               <div class="card-top">
                 <img src="/assets/237-536x354.jpg" alt="Snötäckt bergslandskap i rosa kvällsljus" />
               </div>
               <div class="card-body">
-                <span class="tag tag-red">Familj</span>
+                <div class="d-flex justify-content-space align-items-center ">
+                  <span class="tag tag-red">Familj</span>
+                   <small>
+                     <time class="event-date" datetime="2026-05-31">31 maj</time>
+                  </small>
+                </div>
                 <h3 class="card-title">Keramikkurs för nybörjare</h3>
                 <small class="card-place">Slottskogen, Göteborg</small>
               </div>
             </article>
             <article class="card">
-              <div class="heart-holder">
+             <button class="heart-holder" aria-label="Lägg till i favoriter">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </div>
+              </button>
               <div class="card-top">
                 <img src="/assets/1084-536x354-grayscale.jpg" alt="Tre valrossar vilar på en strand" />
               </div>
               <div class="card-body">
-                <span class="tag tag-blue">Sport</span>
+                  <div class="d-flex justify-content-space align-items-center ">
+                  <span class="tag tag-blue">Sport</span>
+                  <small>
+                    <time class="event-date" datetime="2026-06-01">1 juni</time>
+                  </small>
+                </div>
                 <h3 class="card-title">Keramikkurs för nybörjare</h3>
                 <small class="card-place">Studio Lera, Göteborg</small>
               </div>
             </article>
             <article class="card">
-              <div class="heart-holder">
+              <button class="heart-holder" aria-label="Lägg till i favoriter">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-              </div>
+              </button>
               <div class="card-top">
                 <img src="assets/866-200x300.jpg" alt="Snötäckt bergslandskap i rosa kvällsljus" />
               </div>
               <div class="card-body">
-                <span class="tag tag-purple">Konsert</span>
+                 <div class="d-flex justify-content-space align-items-center ">
+                  <span class="tag tag-purple">Konsert</span>
+                  <small>
+                    <time class="event-date" datetime="2026-06-03">3 juni</time>
+                  </small>
+                </div>
                 <h3 class="card-title">Keramikkurs för nybörjare</h3>
                 <small class="card-place">Studio Lera, Göteborg</small>
               </div>
@@ -307,11 +337,12 @@
         </div>
 
         <div class="col-4">
-          <h4>Kontakt</h4>
-          <p>info@evently.se</p>
-          <p>031-123 45 67</p>
-          <p>Stora Badhusgatan 18<br />411 21 Göteborg</p>
-        </div>
+         <h4>Kontakt</h4>
+         <address class="adress">
+           <a href="mailto:info@evently.se">info@evently.se</a><br>
+           <a href="tel:+46311234567">031-123 45 67</a><br>
+           Stora Badhusgatan 18
+          </address>
       </footer>
        <!-- Footer -->
   </body>
