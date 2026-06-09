@@ -16,63 +16,275 @@
 
   <body>
     <main>
+
+      <!-- HEADER -->
       <header>
         <nav class="navbar d-flex align-items-center justify-content-around">
           <a href="/" class="logo-holder d-flex align-items-center">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z"
-              />
+            <svg width="32"height="32" viewBox="0 0 24 24"fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" >
+              <path d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z"/>
             </svg>
             <span class="logo-text">Evently</span>
           </a>
           <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-
-          <label for="menu-toggle" class="menu-btn"> ☰ </label>
-
+            <label for="menu-toggle" class="menu-btn"> ☰ </label>
           <ul class="ul d-flex">
-            <li class="list-item active">
-              <a href="/">Hem</a>
-            </li>
-            <li class="list-item">
-              <a href="#">Evenemang</a>
-            </li>
-            <li class="list-item">
-              <a href="#">Kategori</a>
-            </li>
-            <li class="list-item">
-              <a href="#">Om oss</a>
-            </li>
-            <li class="list-item">
-              <a href="#">Kontakt</a>
-            </li>
+            <li class="list-item active"><a href="/">Hem</a></li>
+            <li class="list-item"><a href="#">Evenemang</a></li>
+            <li class="list-item"><a href="#">Kategori</a></li>
+            <li class="list-item"><a href="#">Om oss</a></li>
+            <li class="list-item"><a href="#">Kontakt</a></li>
           </ul>
           <div class="login-holder d-flex align-items-center">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
+            <svg width="20"height="20"viewBox="0 0 24 24" fill="none" stroke="currentColor"stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" >
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <a class="btn-primary" href="#">Skapa konto </a>
+            <a class="btn btn-primary" href="#">Skapa konto </a>
           </div>
         </nav>
       </header>
+
+      <!-- HERO  -->
+      <article class="article">
+         <div class="hero d-grid grid-2">
+          <div class="hero-title">
+            <h1>Hitta lokala evenemang du kommer älska</h1>
+            <p class="hero-description">
+              Från konserter och marknader workshops och familjeaktiviter.
+              Upptäck vad som händer nära dig.
+            </p>
+            <div class="explore-wrapper">
+              <button class="btn btn-primary">Utforska evenemang</button>
+              <button class="btn btn-secondary">Se helgens tips</button>
+            </div>
+          </div>
+          <div class="hero-images">
+            <div class="img-left">
+              <img src="assets/866-200x300.jpg" />
+            </div>
+            <div class="img-right">
+              <img src="assets/1060-536x354-blur_2.jpg" />
+              <img src="assets/237-536x354.jpg" />
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Filtering search banner  -->
+      <section class="search-banner">
+        <div class="container">
+          <h2>Hitta rätt evenemang</h2>
+          <form class="search-form d-grid grid-4">
+            <div class="form-group">
+              <label>Sökord</label>
+              <input type="search" placeholder="Sök på t.ex. konsert, yoga..." />
+            </div>
+            <div class="form-group">
+              <label>Kategori</label>
+              <select>
+                <option>Alla kategorier</option>
+                <option>Konsert</option>
+                <option>Marknad</option>
+                <option>Workshop</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Datum</label>
+              <input type="date" />
+            </div>
+            <button class="btn btn-primary search-btn align-self-end">
+              Sök evenemang
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- EVENTS LIST  -->
+      <article class="article">
+        <section class="events-section">
+          <div class="d-grid grid-3">
+            <div class="card">
+              <div class="card-top">
+                <img src="/assets/1084-536x354-grayscale.jpg" />
+              </div>
+              <div class="card-body">
+                <span class="tag tag-purple">Konsert</span>
+                <h3 class="card-title">Indie Night med Nova sun</h3>
+                <small class="card-place">Studio Lera, Göteborg</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-top">
+                <img src="/assets/237-536x354.jpg" />
+              </div>
+              <div class="card-body">
+                <span class="tag tag-green">Marknad</span>
+                <h3 class="card-title">Vårmarknad i slottskogen</h3>
+                <small class="card-place">Studio Lera, Göteborg</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-top">
+                <img src="/assets/1060-536x354-blur_2.jpg" />
+              </div>
+              <div class="card-body">
+                <span class="tag tag-yellow">Workshop</span>
+                <h3 class="card-title">Keramikkurs för nybörjare</h3>
+                <small class="card-place">Pustervik, Göteborg</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-top">
+                <img src="/assets/237-536x354.jpg" />
+              </div>
+              <div class="card-body">
+                <span class="tag tag-red">Familj</span>
+                <h3 class="card-title">Keramikkurs för nybörjare</h3>
+                <small class="card-place">Slottskogen, Göteborg</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-top">
+                <img src="/assets/1084-536x354-grayscale.jpg" />
+              </div>
+              <div class="card-body">
+                <span class="tag tag-blue">Sport</span>
+                <h3 class="card-title">Keramikkurs för nybörjare</h3>
+                <small class="card-place">Studio Lera, Göteborg</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-top">
+                <img src="assets/866-200x300.jpg" />
+              </div>
+              <div class="card-body">
+                <span class="tag tag-purple">Konsert</span>
+                <h3 class="card-title">Keramikkurs för nybörjare</h3>
+                <small class="card-place">Studio Lera, Göteborg</small>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+
+        <!-- Information banner  -->
+      <section class="info-banner">
+        <div class="container d-grid grid-3">
+          <div class="info-block">
+            <div class="icon-circle">
+              <svg width="24"  height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"  stroke-linecap="round"   stroke-linejoin="round"    >
+                <path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2z"></path>
+                <line x1="9" y1="5" x2="9" y2="19"></line>
+              </svg>
+            </div>
+            <div class="info-content">
+              <span class="info-block-title">Gratis & prisvärt</span>
+              <p class="info-block-description">
+                Hitta massor av evenemang som är gratis eller snälla mot
+                plånboken
+              </p>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="icon-circle">
+              <svg class="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none"stroke="currentColor"  stroke-width="2" stroke-linecap="round"stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+             <div class="info-content">
+              <span class="info-block-title">För alla åldrar</span>
+              <p class="info-block-description">
+                Aktiviter för både stora och små - hitta något som passa
+              </p>
+            </div>
+          </div>
+          <div class="info-block">
+            <div class="icon-circle">
+              <svg class="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"stroke-width="2" stroke-linecap="round"stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="info-content">
+              <span class="info-block-title">Nära dig</span>
+              <p class="info-block-description">
+                Upptäck evenemang i ditt område och stöd loakala arrangörer
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="col-1">
+          <a href="/" class="logo-holder d-flex align-items-center">
+            <span class="logo-text">Evently</span>
+          </a>
+           <p>
+            Evently samlar lokala evenemang så att du enkelt kan upptäcka,
+            planera och dela upplevelser som berikar din vardag.
+          </p>
+
+          <!--Social Links-->
+            <div class="socials">
+              
+             <!--Instagram-->
+             <a href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                 </svg>
+                 </a>
+
+            <!--Facebook-->
+            <a href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+
+            <!--X-->
+            <a href="#">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+              </path>
+            </svg>
+          </a>
+          </div>
+        </div>
+
+        <div class="col-2">
+          <h4>Utforska</h4>
+          <ul>
+            <li><a href="#">Alla evenemang</a></li>
+            <li><a href="#">Kategorier</a></li>
+            <li><a href="#">Helgens tips</a></li>
+            <li><a href="#">Populära</a></li>
+          </ul>
+        </div>
+
+        <div class="col-3">
+          <h4>Om Evently</h4>
+          <ul>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">För arrangörer</a></li>
+            <li><a href="#">Vanliga frågor</a></li>
+            <li><a href="#">Nyheter</a></li>
+          </ul>
+        </div>
+
+        <div class="col-4">
+          <h4>Kontakt</h4>
+          <p>info@evently.se</p>
+          <p>031-123 45 67</p>
+          <p>Stora Badhusgatan 18<br />411 21 Göteborg</p>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
