@@ -337,6 +337,13 @@ ul .list-item {
   padding: 2rem 0;
 }
 
+.search-banner-title{
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: var(--bold-800);
+  line-height: 1.2;
+  color: #111827;
+  margin-bottom: 1em;
+}
 
 .img-left {
   height: 360px;
@@ -404,6 +411,7 @@ ul .list-item {
 }
 
 .card {
+  position: relative;
   background: white;
   border-radius: 8px;
   overflow: hidden;
@@ -411,7 +419,19 @@ ul .list-item {
   display: flex;
   flex-direction: column;
   height: 100%;
+
+.heart-holder{
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   cursor: pointer;
+  }
 }
+
+.heart-holder svg{
+color: #ef4444; /* Tailwind Red 500 */
+}
+
 
 .card-top {
   height: 180px;
