@@ -310,7 +310,7 @@ ul .list-item {
   }
 }
 
-.article {
+.article, section {
   width: min(100% - 2rem, 1250px);
   margin-inline: auto;
   margin-bottom: 2rem;
