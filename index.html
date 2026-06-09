@@ -28,7 +28,7 @@
           <input type="checkbox" id="menu-toggle" class="menu-toggle" />
             <label for="menu-toggle" class="menu-btn"> ☰ </label>
           <ul class="ul d-flex">
-            <li class="list-item active"><a href="/">Hem</a></li>
+            <li class="list-item active" aria-current="page"><a href="/">Hem</a></li>
             <li class="list-item"><a href="#">Evenemang</a></li>
             <li class="list-item"><a href="#">Kategori</a></li>
             <li class="list-item"><a href="#">Om oss</a></li>
@@ -50,8 +50,8 @@
     <main>
       
       <!-- HERO  -->
-      <section class="section">
-         <div class="hero d-grid grid-2">
+      <section class="hero d-grid grid-2">
+       
           <div class="hero-title">
             <h1>Hitta lokala evenemang du kommer älska</h1>
             <p class="hero-description">
@@ -72,7 +72,7 @@
               <img src="assets/237-536x354.jpg" alt="Svart hund sitter på ett trägolv och tittar upp mot kameran." />
             </div>
           </div>
-        </div>
+        
       </section>
 
       <!-- Filtering search banner  -->
@@ -81,12 +81,12 @@
           <h2>Hitta rätt evenemang</h2>
           <form class="search-form d-grid grid-4">
             <div class="form-group">
-              <label>Sökord</label>
-              <input type="search" placeholder="Sök på t.ex. konsert, yoga..." />
+              <label for="search">Sökord</label>
+              <input type="search" placeholder="Sök på t.ex. konsert, yoga..." id="search" />
             </div>
             <div class="form-group">
-              <label>Kategori</label>
-              <select>
+              <label for="category">Kategori</label>
+              <select id="category">
                 <option>Alla kategorier</option>
                 <option>Konsert</option>
                 <option>Marknad</option>
@@ -94,8 +94,8 @@
               </select>
             </div>
             <div class="form-group">
-              <label>Datum</label>
-              <input type="date" />
+              <label for="datetime">Datum</label>
+              <input type="date" id="datetime" />
             </div>
             <button class="btn btn-primary search-btn align-self-end">
               Sök evenemang

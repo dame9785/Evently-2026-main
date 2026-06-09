@@ -246,6 +246,12 @@ ul .list-item {
 .btn-primary {
   background-color: var(--purple-600);
   color: #fff;
+  transition: .5s;
+
+&:hover{
+  background-color: oklch(0.41 0.24 279.31);;
+}
+
 }
 
 .btn-secondary {
@@ -310,7 +316,7 @@ ul .list-item {
   }
 }
 
-.article, section {
+.article, .hero{
   width: min(100% - 2rem, 1250px);
   margin-inline: auto;
   margin-bottom: 2rem;
@@ -326,6 +332,10 @@ ul .list-item {
   gap: 2rem;
   align-items: center;
   padding: 2em;
+  width: min(100% - 2rem, 1250px);
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
 }
 
 .hero-images {
@@ -608,4 +618,12 @@ ul .list-item {
     grid-template-columns: 1fr;
     gap: 32px;
   }
+}
+
+
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
 }
