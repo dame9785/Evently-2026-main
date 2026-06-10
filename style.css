@@ -373,9 +373,10 @@ ul .list-item {
   height: 176px;
 }
 
-.hero-title h1 {
+.hero-intro h1 {
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
+  margin-top: .5em;
 }
 
 .hero-description {
@@ -441,7 +442,7 @@ ul .list-item {
 }
 
 .heart-holder svg{
-color: #ef4444; /* Tailwind Red 500 */
+color: #ef4444; 
 }
 
 
