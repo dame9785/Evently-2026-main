@@ -213,6 +213,7 @@ button:focus-visible {
   padding: 8px 24px;
   width: fit-content;
   border: none;
+  font-size: var(--font-sm);
 }
 
 .btn-primary {
@@ -332,7 +333,7 @@ ul .list-item {
 
 .hero-images {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
   max-width: 520px;
 }
