@@ -412,6 +412,11 @@ ul .list-item {
   color: var(--gray-900);
 }
 
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
 .search-btn {
   height: 42px;
   white-space: nowrap;
@@ -653,6 +658,17 @@ footer address{
   .grid-4 {
     grid-template-columns: 1fr;
   }
+
+.info-block{
+    display: grid;
+    grid-template: 1fr 1fr;
+    grid-auto-flow: row;
+    align-items: center;
+    gap: 2em;
+    justify-items: center;
+    text-align: center;
+}
+
 }
 
 
