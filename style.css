@@ -49,6 +49,7 @@
   /*Font size*/
   --font-xs: clamp(0.875rem, 1vw, 1rem);
   --font-sm: clamp(0.9rem, 1vw, 1rem);
+  --font-m: clamp(1.1rem, 2vw, 1.4rem);
 }
 
 /* ==========================================
@@ -255,6 +256,13 @@ button:focus-visible {
   border: none;
 }
 
+.eventlist-title{
+  font-size: var(--font-m);
+  font-weight: var(--bold-800);
+  line-height: 1.2;
+  color: #111827;
+}
+
 /* TAG STYLES */
 .tag {
   padding: 0.5rem;
@@ -360,7 +368,7 @@ ul .list-item {
 }
 
 .search-banner-title{
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: var(--font-m);
   font-weight: var(--bold-800);
   line-height: 1.2;
   color: #111827;
