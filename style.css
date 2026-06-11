@@ -455,6 +455,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 }
 
+.card:focus-visible {
+  outline: 3px solid var(--purple-600);
+  outline-offset: 4px;
+}
+
 .heart-holder{
    position: absolute;
    right: 10px;
@@ -625,7 +630,7 @@ footer address{
   color: var(--white);
 }
 
-/* Mobile screen */
+/* Mobile screen  */
 @media (max-width: 768px) {
     .navbar {
     position: relative;
