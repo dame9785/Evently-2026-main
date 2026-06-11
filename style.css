@@ -202,8 +202,19 @@ button:focus-visible {
   justify-content: space-between;
 }
 
+.justify-content-end{
+  justify-content: end;
+}
+
 .align-self-end {
   align-self: end;
+}
+
+.arrow-right{
+  color: var(--purple-600);
+  margin-bottom: 1em;
+  cursor: pointer;
+  font-weight: var(--bold-600);
 }
 
 /* 5. Components */
@@ -244,6 +255,7 @@ button:focus-visible {
   padding: 0.5rem;
   font-weight: var(--bold-600);
   font-size: var(--font-xs);
+  line-height: 10px;
 }
 
 .tag-purple {
@@ -270,8 +282,6 @@ button:focus-visible {
   background: #dbeafe;
   color: #2563eb;
 }
-
-/* 6. Sections */
 
 .navbar {
   padding: 8px;
