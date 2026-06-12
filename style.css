@@ -651,7 +651,7 @@ footer address{
   gap: 10px;
 }
 
-/* Mobile screen  */
+/* Table Device screen  */
 @media (max-width: 768px) {
     .navbar {
     position: relative;
@@ -705,7 +705,12 @@ footer address{
   }
 }
 
+
+/* Mobile Device screen  */
 @media (max-width: 568px) {
+  .hero{
+    padding: 0;
+  }
   .grid-3 {
     grid-template-columns: 1fr;
   }
